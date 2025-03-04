@@ -13,6 +13,9 @@ Displays a HUD message based on where a player landed a killshot..
 - Extract the .zip file into `addons/counterstrikesharp/plugins`
 - Enjoy
 
+![image info](./headshot.jpg)
+![image info](./hit.jpg)
+
 ### Configuration
 
 Configuration file generated on addons/counterstrikesharp/configs/plugins/KillShotHUD/KillShotHUD.json
