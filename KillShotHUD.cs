@@ -14,7 +14,7 @@ namespace KillShotHUD
     {
         public override string ModuleName => "KillShot HUD Indicator";
         public override string ModuleAuthor => "M1K@c";
-        public override string ModuleVersion => "1.0.1";
+        public override string ModuleVersion => "1.0.2";
         public override string ModuleDescription => "Displays a HUD message based on where a player landed a killshot.";
 
         private static IGameHUDAPI? _api;
@@ -78,12 +78,12 @@ namespace KillShotHUD
                 case 4:
                     message = Config.LeftArmShotMessage;
                     messageColor = Color.FromName(Config.ArmShotColor);
-                    position = new Vector(5, 25, 80);
+                    position = new Vector(5, 25, 100);
                     break;
                 case 5:
                     message = Config.RightArmShotMessage;
                     messageColor = Color.FromName(Config.ArmShotColor);
-                    position = new Vector(25, 5, 80);
+                    position = new Vector(25, 5, 100);
                     break;
                 case 6:
                     message = Config.LeftLegShotMessage;
@@ -104,10 +104,10 @@ namespace KillShotHUD
             // Display the HUD message
             if (Config.MessageBackground)
             {
-                _api.Native_GameHUD_SetParams(attacker, 2, position, messageColor, 30, "Arial Bold", 0.12f, PointWorldTextJustifyHorizontal_t.POINT_WORLD_TEXT_JUSTIFY_HORIZONTAL_CENTER, PointWorldTextJustifyVertical_t.POINT_WORLD_TEXT_JUSTIFY_VERTICAL_BOTTOM, PointWorldTextReorientMode_t.POINT_WORLD_TEXT_REORIENT_NONE, 0.5f, 0.15f);
+                _api.Native_GameHUD_SetParams(attacker, 2, position, messageColor, 40, "Arial Bold", 0.10f, PointWorldTextJustifyHorizontal_t.POINT_WORLD_TEXT_JUSTIFY_HORIZONTAL_CENTER, PointWorldTextJustifyVertical_t.POINT_WORLD_TEXT_JUSTIFY_VERTICAL_BOTTOM, PointWorldTextReorientMode_t.POINT_WORLD_TEXT_REORIENT_NONE, 0.6f, 1.3f);
             }
             else
-                 _api.Native_GameHUD_SetParams(attacker, 2, position, messageColor, 30, "Arial Bold", 0.12f);
+                 _api.Native_GameHUD_SetParams(attacker, 2, position, messageColor, 40, "Arial Bold", 0.10f);
 
             _api.Native_GameHUD_Show(attacker, 2, message, 2.0f);
 
