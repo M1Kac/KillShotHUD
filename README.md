@@ -4,17 +4,17 @@
 Displays a HUD message based on where a player landed a killshot..
 
 # Requirements
-[Latest release of Counter Strike Sharp](https://github.com/roflmuffin/CounterStrikeSharp)
+[CounterStrikeSharp](https://github.com/roflmuffin/CounterStrikeSharp)
+
 [CS2-GameHUD](https://github.com/darkerz7/CS2-GameHUD/tree/main)
 
 
 # Instalation
-- Download the latest release from [KillShotHUD](https://github.com/M1Kac/KillShotHUD/releases))
+- Download the latest release from [KillShotHUD](https://github.com/M1Kac/KillShotHUD/releases)
 - Extract the .zip file into `addons/counterstrikesharp/plugins`
 - Enjoy
 
-![image info](./headshots.png)
-![image info](./hits.png)
+![image info](./hss.png)
 
 ### Configuration
 
