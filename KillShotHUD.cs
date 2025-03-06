@@ -63,17 +63,17 @@ namespace KillShotHUD
                 case 1:
                     message = Config.HeadshotMessage;
                     messageColor = Color.FromName(Config.HeadshotColor);
-                    position = new Vector(20, 10, 100);
+                    position = new Vector(20, 10, 90);
                     break;
                 case 2:
                     message = Config.ChestShotMessage;
                     messageColor = Color.FromName(Config.ChestShotColor);
-                    position = new Vector(15, 15, 100);
+                    position = new Vector(15, 15, 95);
                     break;
                 case 3:
                     message = Config.StomachShotMessage;
                     messageColor = Color.FromName(Config.StomachShotColor);
-                    position = new Vector(10, 20, 85);
+                    position = new Vector(10, 20, 97);
                     break;
                 case 4:
                     message = Config.LeftArmShotMessage;
@@ -104,10 +104,10 @@ namespace KillShotHUD
             // Display the HUD message
             if (Config.MessageBackground)
             {
-                _api.Native_GameHUD_SetParams(attacker, 2, position, messageColor, 40, "Arial Bold", 0.10f, PointWorldTextJustifyHorizontal_t.POINT_WORLD_TEXT_JUSTIFY_HORIZONTAL_CENTER, PointWorldTextJustifyVertical_t.POINT_WORLD_TEXT_JUSTIFY_VERTICAL_BOTTOM, PointWorldTextReorientMode_t.POINT_WORLD_TEXT_REORIENT_NONE, 0.6f, 1.3f);
+                _api.Native_GameHUD_SetParams(attacker, 2, position, messageColor, 50, "Arial Bold", 0.07f, PointWorldTextJustifyHorizontal_t.POINT_WORLD_TEXT_JUSTIFY_HORIZONTAL_CENTER, PointWorldTextJustifyVertical_t.POINT_WORLD_TEXT_JUSTIFY_VERTICAL_BOTTOM, PointWorldTextReorientMode_t.POINT_WORLD_TEXT_REORIENT_NONE, 0.6f, 1.2f);
             }
             else
-                 _api.Native_GameHUD_SetParams(attacker, 2, position, messageColor, 40, "Arial Bold", 0.10f);
+                 _api.Native_GameHUD_SetParams(attacker, 2, position, messageColor, 50, "Arial Bold", 0.07f);
 
             _api.Native_GameHUD_Show(attacker, 2, message, 2.0f);
 
